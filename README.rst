@@ -8,6 +8,7 @@ Looking to eventually use osmesa to generate images from an OpenGL buffer.
 Required packages
 -----------------
 
+--------------- -------
 Package         Version
 --------------- -------
 freetype-py     2.2.0
@@ -29,6 +30,7 @@ setuptools      60.9.3
 six             1.16.0
 trimesh         3.10.7
 wheel           0.37.1
+--------------- -------
 
 Running
 -------
