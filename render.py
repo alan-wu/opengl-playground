@@ -7,18 +7,20 @@ from opencmiss.argon.argondocument import ArgonDocument
 from opencmiss.zinc.context import Context
 from opencmiss.zinc.sceneviewer import Sceneviewer
 
-from platforms.pyglet import PygletPlatform
+# from platforms.pyglet import PygletPlatform
+from platforms.osmesa import OSMesaPlatform
 from renderer import Renderer, RenderFlags
 
 
 argon_document = "argon-document.json"
 
 
-platform = PygletPlatform(512, 512)
+# platform = PygletPlatform(512, 512)
+platform = OSMesaPlatform(512, 512)
 platform.init_context()
 platform.make_current()
 
-renderer = Renderer(512, 512)
+# renderer = Renderer(512, 512)
 # renderer.configure(0)
 
 document = ArgonDocument()
@@ -65,7 +67,7 @@ for view in views:
         sceneviewer.setScene(zinc_scene)
         sceneviewer.renderScene()
 
-        sceneviewer.writeImageToFile(name + ".jpg", False, 512, 512, 0, 0)
+        sceneviewer.writeImageToFile(name + ".jpeg", False, 512, 512, 0, 0)
 
 # platform.make_current()
 #colour, depth = renderer.read(z_near, z_far, 0)
