@@ -3,10 +3,10 @@ import abc
 import six
 
 
-TARGET_OPEN_GL_MAJOR = 4  # Target OpenGL Major Version
+TARGET_OPEN_GL_MAJOR = 2  # Target OpenGL Major Version
 TARGET_OPEN_GL_MINOR = 1  # Target OpenGL Minor Version
-MIN_OPEN_GL_MAJOR = 3     # Minimum OpenGL Major Version
-MIN_OPEN_GL_MINOR = 3     # Minimum OpenGL Minor Version
+MIN_OPEN_GL_MAJOR = 2     # Minimum OpenGL Major Version
+MIN_OPEN_GL_MINOR = 0     # Minimum OpenGL Minor Version
 
 @six.add_metaclass(abc.ABCMeta)
 class Platform(object):

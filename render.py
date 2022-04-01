@@ -19,7 +19,7 @@ platform.init_context()
 platform.make_current()
 
 renderer = Renderer(512, 512)
-renderer.configure(0)
+#renderer.configure(0)
 
 document = ArgonDocument()
 
@@ -65,17 +65,19 @@ for view in views:
         sceneviewer.setScene(zinc_scene)
         sceneviewer.renderScene()
 
-        z_near = sceneviewer.getNearClippingPlane()
-        z_far = sceneviewer.getFarClippingPlane()
+        sceneviewer.writeImageToFile(name +".jpg", False, 512, 512, 0 , 0) 
+
+        #z_near = sceneviewer.getNearClippingPlane()
+        #z_far = sceneviewer.getFarClippingPlane()
 
 
 platform.make_current()
-colour, depth = renderer.read(z_near, z_far, 0)
+#colour, depth = renderer.read(z_near, z_far, 0)
 # fuze_trimesh = trimesh.load('fuze.obj')
 # mesh = pyrender.Mesh.from_trimesh(fuze_trimesh)
 # scene.add(mesh)
 
-print(colour)
+#print(colour)
 # pyrender.Viewer(scene, use_raymond_lighting=True)
 
 # import pyrender
